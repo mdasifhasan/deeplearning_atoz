@@ -46,5 +46,9 @@ plt.ylabel('Google Stock Price')
 plt.legend()
 plt.show()
 
-
+import math
+from sklearn.metrics import mean_squared_error
+rmse = math.sqrt(mean_squared_error(real_price, predicted))
+rmse_percent = rmse/np.average(real_price)*100
+print("rmse_percent: ", rmse_percent, "%")
 
